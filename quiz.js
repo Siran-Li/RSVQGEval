@@ -8,7 +8,7 @@ let questions = json['5'];
 //     console.log(data);
 // }
 // loadConfigData();
-// let questions = data['5'];
+// let questions = json['5'];
 // let questions = [
 //     {
 //         id: 1,
@@ -38,119 +38,7 @@ let questions = json['5'];
 //             "None of these"
 //         ]   
 //       },
-      
-    //   {
-    //     id: 3,
-    //     triplet: "[grass, at location, tree] <br> <br>",
-    //     answer: "Green grass",
-    //     question: "<br> A: What is surrounding the field and surrounding it?  <br>\
-    //                <br> B: What is surrounding the field and near a track field?",
-    //     gt_answer:"Question A",
-    //     options: [
-    //         "Question A",
-    //         "Question B",
-    //         "Same",
-    //         "None of these"
-    //     ]   
-    //   },
-    //   {
-    //     id: 4,
-    //     triplet: "[grass, at location, tree] <br> <br>",
-    //     answer: "Green grass",
-    //     question: "<br> A: What is surrounding the field and surrounding it?  <br>\
-    //                <br> B: What is surrounding the field and near a track field?",
-    //     gt_answer:"Question A",
-    //     options: [
-    //         "Question A",
-    //         "Question B",
-    //         "Same",
-    //         "None of these"
-    //     ]   
-    //   },
-    //   {
-    //     id: 5,
-    //     triplet: "[grass, at location, tree] <br> <br>",
-    //     answer: "Green grass",
-    //     question: "A: What is surrounding the field and surrounding it?  <br>\
-    //                 B: What is surrounding the field and near a track field?",
-    //     gt_answer:"Question A",
-    //     options: [
-    //         "Question A",
-    //         "Question B",
-    //         "Same",
-    //         "None of these"
-    //     ]   
-    //   },
-    //   {
-    //     id: 6,
-    //     triplet: "[grass, at location, tree] <br> <br>",
-    //     answer: "Green grass",
-    //     question: "<br> A: What is surrounding the field and surrounding it?  <br>\
-    //                <br> B: What is surrounding the field and near a track field?",
-    //     gt_answer:"Question A",
-    //     options: [
-    //         "Question A",
-    //         "Question B",
-    //         "Same",
-    //         "None of these"
-    //     ]   
-    //   },
-    //   {
-    //     id: 7,
-    //     triplet: "[grass, at location, tree] <br> <br>",
-    //     answer: "Green grass",
-    //     question: "<br> A: What is surrounding the field and surrounding it?  <br>\
-    //                <br> B: What is surrounding the field and near a track field?",
-    //     gt_answer:"Question A",
-    //     options: [
-    //         "Question A",
-    //         "Question B",
-    //         "Same",
-    //         "None of these"
-    //     ]   
-    //   },
-    //   {
-    //     id: 8,
-    //     triplet: "[grass, at location, tree] <br> <br>",
-    //     answer: "Green grass",
-    //     question: "<br> A: What is surrounding the field and surrounding it?  <br>\
-    //                <br> B: What is surrounding the field and near a track field?",
-    //     gt_answer:"Question A",
-    //     options: [
-    //         "Question A",
-    //         "Question B",
-    //         "Same",
-    //         "None of these"
-    //     ]   
-    //   },
-    //   {
-    //     id: 9,
-    //     triplet: "[grass, at location, tree] <br> <br>",
-    //     answer: "Green grass",
-    //     question: "<br> A: What is surrounding the field and surrounding it?  <br>\
-    //                <br> B: What is surrounding the field and near a track field?",
-    //     gt_answer:"Question A",
-    //     options: [
-    //         "Question A",
-    //         "Question B",
-    //         "Same",
-    //         "None of these"
-    //     ]    
-    //   },
-    //   {
-    //     id: 10,
-    //     triplet: "[grass, at location, tree] <br> <br>",
-    //     answer: "Green grass",
-    //     question: "<br> A: What is surrounding the field and surrounding it?  <br>\
-    //                <br> B: What is surrounding the field and near a track field?",
-    //     gt_answer:"Question A",
-    //     options: [
-    //         "Question A",
-    //         "Question B",
-    //         "Same",
-    //         "None of these"
-    //     ]     
-    //   },
+
 // ];
 
 let question_count = 0;
@@ -209,13 +97,10 @@ function toggleActive(count){
             selection[questions[count].id] = options[i];
         }
     }
-    // let user_answer = document.querySelector("li.option.active").innerHTML;
-    // document.getElementById('choose_option').value = document.querySelector("li.option.active").innerHTML;
-    // let option_name = document.querySelector("li.option.active").innerHTML;
 }
 
 
-function next(){
+window.next = function() {
 
     if(question_count == questions.length -1){
         location.href = "final.html";
