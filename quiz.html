@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz-final.css">
+    <title>Quiz-Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script>
+        function SubForm (){
+            $.ajax({
+                url:'https://api.apispreadsheets.com/data/zBcmGuqs4KUPv8Oe/',
+                headers: {"accessKey": "YOUR_ACCESS_KEY", "secretKey": "YOUR_ACCESS_KEY"},
+                type:'post',
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                alert("Form Data Submitted :)")
+                },
+                error: function(){
+                alert("There was an error :(")
+                }
+            });
+        }
+        </script>
+</head>
+<body>
+    <!--QUIZ-QUESTION-->
+    <div class="wrapper">
+        <div class="quiz">
+            <div class="prompt"> 
+                <h4> Choose a better question according to: Image, Answer, Related knowledge <span class="name"></span></h4>
+            </div>
+            <div class="progress"> 
+                <div id="progress">
+                </div>
+            </div>
+            <div class="quiz_all">
+                <div id="questions"></div>
+                <button class="btn-next" onclick="next()">Next Question</button>
+            </div>
+        </div>
+        <div class="body_image"> 
+            <img
+            src="images/ground_track_field_067.png"
+            alt="ground_track_field_067.png"
+            width="350"
+            height="350"
+            title="ground_track_field_067.png" />
+        </div>
+    </div>
+
+    <script type="module" src="quiz.js"></script>
+    <!-- <script src="userinfo.js"></script> -->
+</body>
+</html>

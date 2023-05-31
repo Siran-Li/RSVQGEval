@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>VQG Evaluation</title>
+
+    <link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+    <!--Materialize CSS for Home Page Design-->
+    <nav class="nav-wrapper black">
+        <div class="container">
+            <a href="#home.html" class="brand-logo center">Question Comparison</a>
+        </div>
+    </nav>
+
+    <section class="container section">
+        <div class="row">
+            <div class="col s12 l6 offset-l3">
+                <form class="groupform" name="groupid">
+                <h4 class="center-align white-text">GROUP ID</h4>
+            
+                <div class="progress yellow">
+                    <div class="indeterminate"></div>
+                </div>
+
+                <div class="input-field">
+                    <!-- <i class="material-icons white-text prefix">account_box</i> -->
+                    <input type="text" class="white-text" id="group_input">
+                    <label for="group">Which group of questions</label>
+                    <p class="center"><br></p>
+                    <!-- <p class="center"><button type="submit" class="btn blue" 
+                        onclick="this.style.display='none'">Question Group</button></p> -->
+                </div>
+
+                <div>
+                    <p class="white-text green">EVALUATION RULES :</p>
+                    <p class="black-text white ">1. Question is proposed based on the image.</p>
+                    <p class="black-text white ">2. Question is proposed for the expected answer.</p>
+                    <p class="black-text white ">3. Question should be related to the knowledge triplet.</p>
+                </div>
+
+                <div class="progress yellow">
+                    <div class="indeterminate"></div>
+                </div>
+
+                <p class="center"><a href="quiz.html" class="btn blue" onclick="submitted()">see an example</a></p>
+                
+            </form>
+            </div>
+        </div>
+    </section>
+   
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+<script>
+    function submitted(){
+        var input = document.getElementById("group_input");
+        sessionStorage.setItem("group", input.value); 
+    }
+</script>
+
+</body>
+</html>

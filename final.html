@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz-final.css">
+    <title>Award-Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script>
+        function SubForm (){
+            $.ajax({
+                url:'https://api.apispreadsheets.com/data/zBcmGuqs4KUPv8Oe/',
+                headers: {"accessKey": "YOUR_ACCESS_KEY", "secretKey": "YOUR_ACCESS_KEY"},
+                type:'post',
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                alert("Form Data Submitted :)")
+                },
+                error: function(){
+                alert("There was an error :(")
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <!--AWARD & POINTS-->
+    <div class="wrapper">
+        <div class="border">
+            <!-- <i class="fas fa-award award_icon" style="margin: 10px 0px 0px 130px; color: gold;"></i> -->
+            <h1 class="username"><span class="name" style="font-size: 50px; color: #fff;"></span><br>Thank you ! ^-^ </h1>
+            <!-- <p class="userpoints">Your Points <span class="points" style="color: rgb(10, 10, 10);"></span></p> -->
+            <!-- <div id="questions">Question</div> -->
+            <div id="second" class="2" style="display:none">
+                <form id="myForm">
+                    <input id="group" name="group" value="" />
+                    <input id="id_0" name="id_0" value="" />
+                    <input id="select_0" name="select_0" value="" />
+                    <input id="id_1" name="id_1" value="" />
+                    <input id="select_1" name="select_1" value="" />
+                </form>
+            </div>
+            <div class="submit">
+                <button class="btn-submit" onclick="SubForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/d56261bbb9.js"></script>
+    <script src="final.js"></script>
+    <!-- <script src="userinfo.js"></script> -->
+</body>
+</html>
