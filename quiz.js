@@ -48,7 +48,7 @@ function show(count){
     question.innerHTML = `
     <ul class="quiz_header"> 
     <li class="quiz_user">
-    <h4> Knowledge Triplet: ${questions[count].triplet} Answer:${questions[count].answer}</h4>
+    <h4> Knowledge Triplet: ${questions[count].triplet} Answer: ${questions[count].answer}</h4>
     </li></ul>
     <ul class="quiz_body"> 
     <h3>${questions[count].question}</h3>
