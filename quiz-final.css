@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url(pic.png);
+    background-image: url(background/pic.png);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -86,6 +86,7 @@ body{
     padding-top: 30px;
     list-style-type: none;
     margin-top: 20px;
+    margin-left: 40px;
     /* margin: 30px 0; */
 }
 
@@ -94,6 +95,34 @@ body{
     display: inline-block;
     width: 150px;
     background-color: #fff;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: 0.4s all;
+    vertical-align: middle;
+}
+
+.option_static{
+    /* display: block; */
+    display: inline-block;
+    width: 150px;
+    background-color: #fff;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: 0.4s all;
+    vertical-align: middle;
+}
+
+.option_select{
+    /* display: block; */
+    display: inline-block;
+    width: 150px;
+    background-color: greenyellow;
     margin-left: 10px;
     margin-bottom: 5px;
     padding: 10px 20px;
@@ -114,17 +143,57 @@ body{
     color: #fff;
 }
 
+.next-button{
+    display: inline;
+}
+
+.btn-back{
+    display: inline-block;
+    border: none;
+    padding: 15px 60px;
+    background-color: #b9c2c6;
+    color: rgb(82, 82, 72);
+    border-radius: 20px;
+    transition: 0.4s all;
+    margin-left: 10px;
+}
+.btn-back:hover{
+    cursor: pointer;
+    background-color: rgb(255, 95, 47);
+    color: #000;
+}
+
+
 .btn-next{
+    display: inline-block;
     border: none;
     padding: 15px 35px;
     background-color: #62c3d2;
     color: #fff;
-    border-radius: 50px;
+    border-radius: 20px;
     transition: 0.4s all;
-    margin-left: 225px;
+    margin-left: 300px;
 }
 
 .btn-next:hover{
+    cursor: pointer;
+    background-color: greenyellow;
+    color: #000;
+}
+
+
+.btn-start{
+    display: inline-block;
+    border: none;
+    padding: 15px 35px;
+    background-color: #62c3d2;
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.4s all;
+    margin-left: 500px;
+}
+
+.btn-start:hover{
     cursor: pointer;
     background-color: greenyellow;
     color: #000;
@@ -139,7 +208,7 @@ body{
 .username, .userpoints{
     color: rgb(4, 4, 4);
     /* text-align: center; */
-    margin-left: 40px;
+    /* margin-left: 40px; */
     margin-top: 15px;
 }
 
@@ -163,7 +232,7 @@ body{
 .btn-submit{
     border: none;
     padding: 15px 35px;
-    background-color: gold;
+    background-color: #62c3d2;
     color: rgb(9, 9, 9);
     font-size: 20px;
     border-radius: 50px;

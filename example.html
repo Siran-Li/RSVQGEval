@@ -35,29 +35,39 @@
             <div class="prompt"> 
                 <h4> Choose a better question according to: Image, Answer, Related knowledge <span class="name"></span></h4>
             </div>
-            <div class="progress"> 
+            <!-- <div class="progress"> 
                 <div id="progress">
                 </div>
-            </div>
+            </div> -->
             <div class="quiz_all">
-                <div id="questions"></div>
+                <div class="quiz_header"> 
+                    <li class="quiz_user">
+                    <h4> Knowledge Triplet: ['empty lanes', 'used for', 'driving'] <br> <br> 
+                         Answer: Empty lanes</h4>
+                    </li></div>
+
+                    <div class="quiz_body"> 
+                    <h3>A: What are used for driving in the other freeways?  <br><br>
+                        B: Where the vehicle can be driven on the freeways?</h3>
+                    <ul class="option_group">
+                    <li class="option_static">Question A</li>
+                    <li class="option_select">Question B</li>
+                    <li class="option_static">Same</li>
+                </ul></div>
                 <div id="next-button">
-                    <div class='btn'><button class="btn-back" onclick="back()">Back</button></div>
-                    <div class='btn'><button class="btn-next" onclick="next()">Next Question</button></div>
+                    <div class='btn'><a  href="quiz.html" class="btn-start"> Let's Start </a></div>
                 </div>
             </div>
         </div>
         <div class="body_image"> 
-            <!-- <div id="image"></div> -->
-            <img id="image" 
-            src="background/test.png"
-            alt="Image"
+            <img 
+            src="background/freeway108.png"
+            alt="freeway108.png"
             width="350"
             height="350"
-            title="None" /> 
+            title="freeways beside each other. walls separating the freeways. vehicles on one of the freeways. empty lanes in the other freeways. dashed lines appearing on the freeways." />
         </div>
     </div>
 
-    <script type="module" src="quiz.js"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@
                     <div class="indeterminate"></div>
                 </div>
 
-                <p class="center"><a href="quiz.html" class="btn blue" onclick="submitted()">see an example</a></p>
+                <p class="center"><a class="btn blue" onclick="submitted()">see an example</a></p>
                 
             </form>
             </div>
@@ -63,8 +63,14 @@
  
 <script>
     function submitted(){
-        var input = document.getElementById("group_input");
-        sessionStorage.setItem("group", input.value); 
+        let groups = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"]
+        var input = document.getElementById("group_input").value;
+        console.log(input)
+        console.log(groups)
+        if(groups.includes(input)){
+            location.href = "example.html";
+            sessionStorage.setItem("group", input); 
+        }
     }
 </script>
 
