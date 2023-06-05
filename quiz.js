@@ -1,5 +1,5 @@
 // var json = require('data/human_eval.json');
-import json from './data/human_eval.json' assert {'type': 'json'};
+import json from './data/human_eval_org.json' assert {'type': 'json'};
 console.log(json);
 let group = sessionStorage.getItem("group");
 let questions = json[group];
